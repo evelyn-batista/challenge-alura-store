@@ -1,5 +1,7 @@
 # Challenge Alura Store
 
+![Status](https://img.shields.io/badge/status-concluído-brightgreen)
+
 ## Objetivos
 Nosso objetivo será ajudar o Sr. João a decidir qual loja da sua rede Alura Store vender para poder investir em um novo negocio. Serão avaliadas 4 lojas fictícias da Alura store e identificar aquela com menor eficiência.
 
