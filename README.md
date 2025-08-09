@@ -1,91 +1,102 @@
-# 📊 Desafio Alura Store – Análise de Dados com Python
+# Challenge Alura Store
 
-Este repositório apresenta a solução do desafio de análise de dados do e-commerce Alura Store. O objetivo é apoiar o Sr. João, proprietário de uma rede de quatro lojas, a decidir qual unidade vender para investir em um novo negócio, utilizando análise de dados e visualização com Python.
+## Objetivos
+Nosso objetivo será ajudar o Sr. João a decidir qual loja da sua rede Alura Store vender para poder investir em um novo negocio. Serão avaliadas 4 lojas fictícias da Alura store e identificar aquela com menor eficiência.
 
----
+## Métricas analisadas
+- Faturamento total de cada loja.
+- Categorias mais populares.
+- Média de avaliação dos clientes.
+- Produtos mais e menos vendidos.
+- Custo médio do frete.
 
-## 🚀 Objetivo
+## Análise de dados
 
-Aplicar conceitos de análise e visualização de dados para identificar, com base em métricas reais, qual loja apresenta o menor desempenho e deve ser vendida. O projeto utiliza bibliotecas nativas do Python e ferramentas amplamente usadas em ciência de dados.
+### Faturamento total
+- Loja 1: R$ 1,534,509.12
+- Loja 2: R$ 1,488,459.06
+- Loja 3: R$ 1,464,025.03
+- Loja 4: R$ 1,384,497.58
+### Frete médio
+- Loja 1: R$ 34,69
+- Loja 2: R$ 33,62
+- Loja 3: R$ 33,07
+- Loja 4: R$ 31,28 
 
----
+![Faturamento e frete médio por loja](https://github.com/NiveskZ/challenge-alura-store/blob/main/imgs/faturamento-freteMedio-bar.png?raw=true)
 
-## 🗂️ Conteúdo do Projeto
+Observamos que a loja 1 possui o maior faturamento e a loja 4 possui um faturamento muito menor em relação aos demais.
 
-- **Importação e preparação dos dados** das quatro lojas.
-- **Análise de faturamento:** comparação do faturamento total de cada loja.
-- **Categorias mais vendidas:** identificação das categorias de maior volume de vendas.
-- **Avaliação dos clientes:** cálculo da média de avaliação de cada loja.
-- **Produtos mais e menos vendidos:** destaque dos itens de melhor e pior desempenho em vendas.
-- **Frete médio:** comparação dos custos médios de frete por loja.
-- **Visualização de dados:** gráficos informativos para cada métrica analisada.
-- **Relatório final:** recomendação baseada em dados sobre qual loja vender.
+### Média de avaliação das lojas (máximo 5)
+- Loja 1: 3,98
+- Loja 2: 4,04
+- Loja 3: 4,05
+- Loja 4: 4,00
+ 
+ As duas lojas com menor média de avaliação são a 1 e 4 com diferença de 0,02 pontos entre si mas uma diferença de no mínimo 0,04 pontos em relação aos demais.
 
----
+### Produtos Mais e Menos Vendidos em Quantidade
+#### Mais vendidos
+- Loja 1:
+    - Micro-ondas: R$ 46.348,89
+    - TV Led UHD 4K: R$ 189.534,28
+    - Guarda roupas: R$ 39.282,78
+  
+  Todos vendendo 60 unidades.
+- Loja 2:
+    - Iniciado em programação: R$ 4.169,96
+  
+  Com 65 unidades vendidas.
+- Loja 3:
+    - Kit banquetas: R$ 22.265,96
+  
+  Com 57 unidades vendidas.
+- Loja 4: Cama box: R$ 43.928,57
 
-## 📈 Principais Resultados
+  Com 62 unidades vendidas.
 
-- **Loja 4** apresenta o menor faturamento, avaliações medianas e não possui diferenciais relevantes em produtos ou categorias.
-- Recomenda-se a venda da **Loja 4** para que o Sr. João possa investir de forma mais estratégica em novos negócios.
+#### Menos vendidos
+- Loja 1:
+    - Headset: R$ 6307,71
+    - Celular ABXY: R$ 43.534,47
+  
+  Ambos com 33 unidades vendidas.
+- Loja 2:
+    - Jogo de tabuleiro: R$ 7.748,58
+      
+  Com 32 unidades vendidas.
+- Loja 3:
+    - Blocos de montar: R$ 1.649,81
+  
+  Com 35 unidades vendidas.
+- Loja 4:
+    - Guitarra: R$ 34.430,67
+  
+  Com 33 unidades vendidas.
 
----
+Através dessas informações, podemos ficar tentados a concluir que a loja 2 vende muito produtos com valores menores em relação as outras lojas, porém note que todas as lojas possui uma amplitude similar de unidades vendidas por produto, logo todos os produtos em cada loja vendem no mínimo 32 unidades e no máximo 65 unidades geralmente.
 
-## 🛠️ Tecnologias Utilizadas
+O gráfico a seguir nos ajuda a visualizar melhor a relevância de venda dos produtos, separado por categoria, em cada loja.
+![Unidades vendidas por categoria](https://github.com/NiveskZ/challenge-alura-store/blob/main/imgs/linhas-unidade-categoria.png?raw=true)
 
-- Python (Pandas, Matplotlib)
-- Google Colab
+Nele, percebemos que todas as lojas possuem um desempenho similar,a loja 2 possui um rendimento abaixo da média nos eletrônicos, porém compensa em instrumentos musicais e livros, estando bem acima das outras lojas. Por outro lado a loja 4 possui um desempenho muito abaixo nos eletrodomésticos e está constantemente abaixo ou igual as outras lojas no restante.
+## Gráficos complementares para análise
 
----
+Tendo em vista o desempenho da loja 4 em unidades por categoria, vamos ver o quanto isso afeta o rendimento ao longo dos dias.
 
-## ▶️ Como Executar
+![Receita diária ao longo do tempo](https://github.com/NiveskZ/challenge-alura-store/blob/main/imgs/dispersao-receita-diaria.png?raw=true)
 
-1. Clone este repositório.
-2. Abra o notebook principal (`AluraStore_Analise.ipynb`) no Google Colab ou Jupyter Notebook.
-3. Execute as células para reproduzir as análises e gráficos.
-4. Certifique-se de que os arquivos de dados estejam no mesmo diretório do notebook.
+Pelo gráfico de dispersão, observamos que a receita diária da loja 4 está bem limitada abaixo de 2000, começando a ter muitos buracos acima disso, aparentando ter um desempenho geral inferior as outras lojas. 
 
----
+![Distribuição da receita em número de dias](https://github.com/NiveskZ/challenge-alura-store/blob/main/imgs/hist-distribuicao-diaria.png?raw=true)
 
-## 🖼️ Exemplos de Gráficos
+O histograma acima corrobora com a informação anterior, onde vemos que a loja 4 possui uma quantidade de dias muito maior de receita abaixo de 2000. 
 
-### Faturamento Total
-![Faturamento total](imagens/faturamento_total.png)
+As outras lojas, apesar de também ter uma alta concentração, possui uma quantidade menor de dias, além de sabermos pelo faturamento que essa receita deve ser compensada em dias especiais e comemorativos.
 
-### Frete Médio por Loja
-![Frete médio por loja](imagens/frete_medio_por_loja.png)
+Por fim temos o gráfico de calor abaixo. Nele podemos observar que a loja 4 possui regiões com uma concentração menor que o restante das lojas, mostrando um desempenho abaixo dos demais em certas regiões. Apesar de ter uma pequena região onde as outras não possuem desempenho visível, as demais possuem uma área bem menor que as outras 3 lojas.
 
-### Média de Avaliações
-![Média de avaliações](imagens/media_de_avaliacoes.png)
+![Heatmap](https://github.com/NiveskZ/challenge-alura-store/blob/main/imgs/heatmap-regiao.png?raw=true)
 
-### Produto Mais Vendido
-![Produto mais vendido](imagens/produto_mais_vendido.png)
-
-### Produto Menos Vendido
-![Produto menos vendido](imagens/produto_menos_vendido.png)
-
-### Vendas por Categoria - Loja 1
-![Vendas por categoria loja 1](imagens/vendas_por_categoria_loja_1.png)
-
-### Vendas por Categoria - Loja 2
-![Vendas por categoria loja 2](imagens/vendas_por_categoria_loja_2.png)
-
-### Vendas por Categoria - Loja 3
-![Vendas por categoria loja 3](imagens/vendas_por_categoria_loja_3.png)
-
-### Vendas por Categoria - Loja 4
-![Vendas por categoria loja 4](imagens/vendas_por_categoria_loja_4.png)
-
-## 📽️ Apresentação
-
-[Clique aqui para ver a apresentação do projeto](Relatorio.pdf)
-
-> **Com base nas análises quantitativas e visuais, a Loja 4 foi recomendada para venda por apresentar o menor desempenho financeiro e operacional entre as quatro unidades analisadas.**
-
----
-
-## 📬 Contato
-
-Dúvidas ou sugestões? Entre em contato pelo [[LinkedIn](https://www.linkedin.com/in/tabatagonzales/)].
-
-Copyright (c) 2025 **[Tabata Gonzales]**
-
+## Conclusão
+A análise consolidada dos dados evidencia que a Loja 4 apresenta o desempenho mais deficiente. Com um faturamento substancialmente menor que as demais unidades, sua venda é estrategicamente vantajosa. A decisão é reforçada pela ausência de categorias de produtos que se sobressaiam, pelo baixo desempenho regional e pela inconsistência na distribuição de sua receita, o que minimiza o impacto de sua saída da rede.
